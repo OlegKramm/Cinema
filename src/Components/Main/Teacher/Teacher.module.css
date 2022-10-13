@@ -1,0 +1,11 @@
+.teacher{
+    background-color: aqua;
+    width: 100%;
+    display: flex;
+    
+}
+.teacher .teacherName{
+    color: red;
+    width: 20%;
+    background-color: aquamarine;
+}

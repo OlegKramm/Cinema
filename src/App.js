@@ -1,24 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import Main from './Components/Main/Main';
+import Nav from './Components/Header/Nav/Nav'
+import Home from "./Components/Main/Home/Home";
+import Videos from './Components/Main/Videos/Videos';
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Teacher from './Components/Main/Teacher/Teacher';
+import Contact from './Components/Main/Contact/Contact';
+import Free from './Components/Main/Free/Free';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <div className='wrapper'> 
+      <Header>
+        <Nav/>
+        <nav>
+          hello
+        </nav>
+       
+     </Header>
+        
+      <Main>
+      <Routes>
+             <Route path='/home' element = {<Home/>} ></Route>
+             <Route exact path='/teacher/' element = {<Teacher/>} ></Route>
+             <Route path='/tutorials' element = {<Videos/>} ></Route>
+             <Route path='/free' element = {<Free/>} ></Route>
+             <Route path='/contact' element = {<Contact/>} ></Route>
+          </Routes>  
+        
+      </Main>
+      <Footer/>
     </div>
+    </BrowserRouter>
   );
 }
 
