@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import style from "./Teacher.module.css"
+import Teacher_1 from "./Teacher_1/Teacher_1";
+import Teacher_2 from "./Teacher_2/Teacher_2";
+
+
 
 const TeacherName = (props) =>{
     let path = '/teacher/' + props.id;
@@ -21,11 +25,11 @@ const Profile = (props) => {
 }
 
 
-
 const Teacher = () => {
 return (
     <div className={style.teacher}>
-        <div className={style.teacherName}>
+        <div className={style.teacherName}>         
+            {/* <TeacherName name ="Dima" id="01"/> */}
             <TeacherName name ="Dima" id="01"/>
             <TeacherName name ="Andrey" id="02"/>
             <TeacherName name ="Oksana" id="03"/>
@@ -34,18 +38,12 @@ return (
             
        </div>
        <div>
-         <Profile message="Hello!"/>
-         <Profile message="Hi!"/>
-         <Profile message="How are you!"/>
+       <Teacher_1/>
+       <Teacher_2/>
 
        </div>
 
-
-
-
-
    </div>
-
 
 
 )

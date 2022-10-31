@@ -13,13 +13,10 @@ import Free from './Components/Main/Free/Free';
 function App() {
   return (
     <BrowserRouter>
-    <div className='wrapper'> 
+    <div className='wrapper'> Vfrtns
       <Header>
         <Nav/>
-        <nav>
-          hello
-        </nav>
-       
+  
      </Header>
         
       <Main>
